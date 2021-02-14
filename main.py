@@ -4,8 +4,8 @@ import plotly
 import plotly.graph_objects as go
 
 # Defining the dimensions of world and number of frames
-DIM = 100
-NUM_FRAMES = 500
+DIM = 150
+NUM_FRAMES = 1000
 INIT_STATE = [[random.choice([0, 1])
                for _ in range(DIM)] for _ in range(DIM)]
 
@@ -13,7 +13,7 @@ INIT_STATE = [[random.choice([0, 1])
 class World:
     """Environment for the game"""
 
-    def __init__(self):
+    def __init__(self, state):
         self.state = state
 
     def getActiveNeighbors(self, col, row):
